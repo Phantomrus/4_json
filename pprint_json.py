@@ -1,9 +1,8 @@
 import json
 
 def load_data(filepath):
-    json_file = open(filepath, 'r')
-    json_list = json.loads(json_file.read())
-    json_file.close()
+    with open(filepath, 'r') as json_file:
+        json_list = json.loads(json_file.read())
     return json_list
 
 def pretty_print_json(data):
