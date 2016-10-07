@@ -8,6 +8,6 @@ def load_data(filepath):
 def pretty_print_json(data):
     print(json.dumps(data, sort_keys=True, indent=4))
 
-
-json_file_path = input("Enter the path to the file: ")
-pretty_print_json(load_data(json_file_path))
+if __name__ == '__main__':
+    json_file_path = input("Enter the path to the file: ")
+    pretty_print_json(load_data(json_file_path))
